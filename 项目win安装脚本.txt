@@ -1,0 +1,20 @@
+C:\User\App\Anaconda3\envs\py36\Scripts
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install -r .\requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install -r C:\Users\117503445\Desktop\FakeBlock-master\FakeBlock-master\classification\requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install C:\Users\117503445\Desktop\dlib-19.8.1-cp36-cp36m-win_amd64.whl
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install pretrainedmodels
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install sklearn
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install BeautifulSoup4 -i https://pypi.tuna.tsinghua.edu.cn/simple
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install pytube3
+C:\User\App\Anaconda3\envs\py36\Scripts\pip.exe install pytorch_pretrained_bert -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+C:\User\App\Anaconda3\envs\py36\Scripts\pipreqs.exe  . --encoding=utf8 --force
+
+C:\User\App\Anaconda3\envs\py36\python.exe C:\Users\117503445\Desktop\FakeBlock-master\FakeBlock-master\fakeblock.py
