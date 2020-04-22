@@ -1,5 +1,5 @@
 docker build -t 1175/fb .
-docker run --name fb -d 1175/fb
+docker run --name fb -p 80:80 -d 1175/fb
 
 docker exec -it fb bash
 
