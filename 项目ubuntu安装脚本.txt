@@ -1,9 +1,9 @@
-docker build -t 1175/fb .
-docker run --name fb -p 80:80 -d 1175/fb
+docker build -t 1175/fakeblock .
+docker run --name fakeblock -p 80:80 -d 1175/fakeblock
 
-docker exec -it fb bash
+docker exec -it fakeblock bash
 
-docker rmi -f 1175/fb
+docker rmi -f 1175/fakeblock
 
 tee /etc/apt/sources.list <<-'EOF'
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
