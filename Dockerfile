@@ -4,4 +4,4 @@ COPY ./ubuntu-dlib /usr/local/lib/python3.6/site-packages
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . /app
-CMD [ "python" , "fakeblock.py]
+CMD [ "python" , "fakeblock.py"]
