@@ -7,17 +7,29 @@ import requests
 import json
 import os
 import glob
-from pytube import YouTube
-
+import hashlib
 from io import BytesIO
 from PIL import Image
 
 
 UPLOAD_FOLDER = './deepfakes'
 
-def download_video(link):
-    yt = YouTube(link)
-    yt.streams.filter(progressive=True).order_by('resolution').desc().first().download()
+def download_video(url):
+    try:
+        print('准备下载视频:'+url)
+        response=requests.get(url)
+        data=response.content
+        if data:
+            file_path='{}/{}.{}'.format(os.getcwd(),hashlib.md5(data).hexdigest(),'mp4')
+            print('文件为:'+file_path)
+            if not os.path.exists(file_path):
+                with open(file_path,'wb')as f:
+                    f.write(data)
+                    f.close()
+                    print('视频下载成功:'+url)
+    except Exception:
+        print('视频下载失败')
+
 
 def getsizes(url):
     # get file size *and* image size (None if not known)
@@ -30,19 +42,23 @@ def getsizes(url):
     return width, height
 
 def get_elements(page_link):
-    try:
-        if "youtube.com/" in page_link.lower():
-            # videos
+    try:      
+        page_response = requests.get(page_link, timeout=5)
+        page_content = BeautifulSoup(page_response.content, "html.parser")
+
+        #videos
+        filepath=None
+        if page_content.find('video') != None:
+            video = page_content.find_all('video')
+            video_link = video.get('src')
             os.chdir(UPLOAD_FOLDER)
-            download_video(page_link)
+            download_video(video_link)
             os.chdir('../')
             list_of_files = glob.glob(f'{UPLOAD_FOLDER}/*')
             latest_file = max(list_of_files, key=os.path.getctime)
             filepath = latest_file
             return [None, None, filepath]
-
-        page_response = requests.get(page_link, timeout=5)
-        page_content = BeautifulSoup(page_response.content, "html.parser")
+            
         
         paragraphs = page_content.find_all("p")
         clean_paragraphs = []
@@ -87,5 +103,3 @@ def get_elements(page_link):
         print(e)
         return [None, None, None]
 
-if __name__ == "__main__":
-    print(pytube.__file__)

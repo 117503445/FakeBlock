@@ -110,7 +110,6 @@ def check_if_fake(url):
         return None
 
 # if __name__ == "__main__":
-    # check_if_fake('https://www.youtube.com/watch?v=cQ54GDm1eL0')
     # print(check_if_fake('https://medium.com/futuremag/fortnite-creative-mode-isn-t-for-everybody-9551c47d2de3'))
     # print(check_if_fake('https://medium.com/futuremag/why-people-buy-30-power-cords-against-all-reason-8d01b837ce4e'))
     # print(check_if_fake('https://www.cnn.com/2019/12/08/politics/north-korea-donald-trump-test-kim-jong-un/index.html'))
