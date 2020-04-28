@@ -4,4 +4,4 @@ COPY ./ubuntu-dlib /usr/local/lib/python3.6/site-packages
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . /app
-ENTRYPOINT [ "python" , "fakeblock.py"]
+ENTRYPOINT [ "python" , "antifake.py"]
