@@ -4,7 +4,7 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
    //向服务器发送请求
    $.ajax({
      type: "POST",
-     url: "http://127.0.0.1:80/detect",
+     url: "http://fakeblock.117503445.top/detect",
      data: {data: url},
      //处理返回的请求
      success: function(data){removeElements(data, activeTab);},
