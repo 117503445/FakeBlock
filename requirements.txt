@@ -4,7 +4,7 @@ requests==2.23.0
 torch==1.4.0
 opencv_python==4.2.0.34
 torchvision==0.5.0
-Flask_Cors==3.0.8
+Flask_Cors==3.0.9
 tqdm==4.25.0
 pandas==1.0.3
 Flask==1.1.2
