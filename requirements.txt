@@ -12,7 +12,7 @@ pytorch_pretrained_bert==0.6.2
 dlib==19.19.0
 app==0.0.1
 beautifulsoup4==4.9.0
-Pillow==7.1.1
+Pillow==9.0.0
 PyTube3==9.6.4
 scikit_learn==0.22.2.post1
 torchsummary==1.5.1
